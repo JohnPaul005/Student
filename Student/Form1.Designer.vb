@@ -38,6 +38,10 @@ Partial Class Form1
         Me.cmbcourse = New System.Windows.Forms.ComboBox()
         Me.txtcontact = New System.Windows.Forms.TextBox()
         Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.txtstudentno = New System.Windows.Forms.TextBox()
+        Me.btnaddnew = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
+        Me.btnupdate = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -144,6 +148,7 @@ Partial Class Form1
         'cmbgender
         '
         Me.cmbgender.FormattingEnabled = True
+        Me.cmbgender.Items.AddRange(New Object() {"Male", "Female"})
         Me.cmbgender.Location = New System.Drawing.Point(20, 219)
         Me.cmbgender.Name = "cmbgender"
         Me.cmbgender.Size = New System.Drawing.Size(90, 23)
@@ -152,6 +157,7 @@ Partial Class Form1
         'cmbcourse
         '
         Me.cmbcourse.FormattingEnabled = True
+        Me.cmbcourse.Items.AddRange(New Object() {"BS IT", "BS HRM", "BS Toursm", "BS Educ Major english", "BS Educ Major Math"})
         Me.cmbcourse.Location = New System.Drawing.Point(281, 219)
         Me.cmbcourse.Name = "cmbcourse"
         Me.cmbcourse.Size = New System.Drawing.Size(213, 23)
@@ -166,17 +172,56 @@ Partial Class Form1
         '
         'ListView1
         '
+        Me.ListView1.FullRowSelect = True
         Me.ListView1.Location = New System.Drawing.Point(20, 249)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(573, 334)
+        Me.ListView1.Size = New System.Drawing.Size(686, 334)
         Me.ListView1.TabIndex = 15
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
+        'txtstudentno
+        '
+        Me.txtstudentno.Location = New System.Drawing.Point(102, 20)
+        Me.txtstudentno.Name = "txtstudentno"
+        Me.txtstudentno.Size = New System.Drawing.Size(106, 23)
+        Me.txtstudentno.TabIndex = 16
+        '
+        'btnaddnew
+        '
+        Me.btnaddnew.Location = New System.Drawing.Point(27, 596)
+        Me.btnaddnew.Name = "btnaddnew"
+        Me.btnaddnew.Size = New System.Drawing.Size(109, 31)
+        Me.btnaddnew.TabIndex = 17
+        Me.btnaddnew.Text = "ADD NEW"
+        Me.btnaddnew.UseVisualStyleBackColor = True
+        '
+        'btndelete
+        '
+        Me.btndelete.Location = New System.Drawing.Point(484, 596)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(109, 31)
+        Me.btndelete.TabIndex = 18
+        Me.btndelete.Text = "DELETE"
+        Me.btndelete.UseVisualStyleBackColor = True
+        '
+        'btnupdate
+        '
+        Me.btnupdate.Location = New System.Drawing.Point(142, 596)
+        Me.btnupdate.Name = "btnupdate"
+        Me.btnupdate.Size = New System.Drawing.Size(109, 31)
+        Me.btnupdate.TabIndex = 19
+        Me.btnupdate.Text = "UPDATE"
+        Me.btnupdate.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(718, 606)
+        Me.ClientSize = New System.Drawing.Size(718, 673)
+        Me.Controls.Add(Me.btnupdate)
+        Me.Controls.Add(Me.btndelete)
+        Me.Controls.Add(Me.btnaddnew)
+        Me.Controls.Add(Me.txtstudentno)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.txtcontact)
         Me.Controls.Add(Me.cmbcourse)
@@ -216,4 +261,8 @@ Partial Class Form1
     Friend WithEvents cmbcourse As ComboBox
     Friend WithEvents txtcontact As TextBox
     Friend WithEvents ListView1 As ListView
+    Friend WithEvents txtstudentno As TextBox
+    Friend WithEvents btnaddnew As Button
+    Friend WithEvents btndelete As Button
+    Friend WithEvents btnupdate As Button
 End Class

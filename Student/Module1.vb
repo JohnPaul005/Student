@@ -8,7 +8,7 @@ Module Module1
     Public sql As String
 
     Public Sub opencon()
-        cn.ConnectionString = "Server = Localhost; Port = 5432; User ID = postgres; Password = admin; Database = StudentDB"
+        cn.ConnectionString = "Server = localhost; port = 5432; User ID = postgres; Password = admin; Database = StudentDB"
 
         If cn.State = ConnectionState.Closed Then
             cn.Open()
